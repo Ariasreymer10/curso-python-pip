@@ -12,7 +12,7 @@ cd game
 
 ## Steps 
 
-To run the Game, follow these steps in the Terminal:
+To run the Game, follow these steps in to the Terminal:
 
 ```bash
 cd game
