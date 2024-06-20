@@ -1,6 +1,6 @@
 #Generar Lista de una Manera Más Corta y Facil de Comprender
 
-'''
+
 numbers = []
 for element in range (1,11):
     numbers.append(element)
@@ -91,7 +91,7 @@ dict_v2 = {i: i**2 for i in range(1,11)}
 print(dict_v2) 
 #In Dictionary Comprehension it's important to have a Key and a Value
 
-'''
+
 
 
 users = ["Miguel", "Luis", "Carlos", "Juan", "Pedro"]
@@ -106,3 +106,46 @@ print(new_dict)
 
 
 #The Zip Function is used to combine two lists into a single list of tuples
+
+
+
+text = "Í'm learning Python for Data Science"
+unique = { c: c.upper() for c in text if c in "aeiou"}
+print(unique)
+
+
+#Now we have to count the number of vowels in the text
+
+count_vowels = { c: text.count(c) for c in text if c in "aeiou"}
+print(count_vowels)
+
+def run():
+    text = "Í'm learning Python for Data Science"
+    print(text)
+    unique_v2 = { c: text.count(c) for c in text if c in "aeiou"}
+    print("The Count of Vowels in the Text is: ", unique_v2)
+
+if __name__ == '__main__':
+    run()
+
+# List of Students and their grades
+students = [
+    ("Juan", 85),
+    ("Ana", 78),
+    ("Luis", 92),
+    ("Maria", 66),
+    ("Carlos", 74)
+]
+
+# Calculate the average grade
+grades = [grade for _, grade in students]
+average = sum(grades) / len(grades)
+print(f"Average grade: {average}")
+
+# Filter students with grade higher than 70
+passed = [student for student in students if student[1] > 70]
+print(f"Passed students: {passed}")
+
+# Store information in a dictionary
+student_info = {name: qualification for name, qualification in students}
+print(f"Student info: {student_info}")

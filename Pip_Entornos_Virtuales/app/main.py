@@ -7,6 +7,7 @@ def run():
   data = list(filter(lambda item : item["Continent"] == "South America", data))
   
   countries = list(map(lambda x: x['Country'], data))
+  #Implementación de las lambda Functión para  simplicar el porceso de Recopliació ne Datos
   percentages = list(map(lambda x: x['World Population Percentage'], data))
   charts.generate_pie_chart(countries, percentages)
   
